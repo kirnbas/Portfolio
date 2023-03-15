@@ -1,0 +1,86 @@
+.aboutme {
+    padding-top: 120px;    
+
+    &__wrapper {
+        margin-right: 100px;
+        display: grid;
+        grid-template-columns: 400px 570px;
+        column-gap: 70px;
+    }
+
+    &__photo {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__header {
+        padding-top: 6px;
+        .divider {
+            margin: 0;
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include before_circle;
+    }
+    &__title {
+        margin-top: 10px;
+    }
+    &__text {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__footer {
+        margin-top: 40px;
+        display: grid;
+        grid-template-areas: 
+             "webdev mobdev"
+             "design .";
+        column-gap: 50px;
+        row-gap: 20px;        
+        p{
+            width: 200px;
+            margin-top: 6px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__item:nth-child(1) {
+        grid-area: webdev;
+    }
+    &__item:nth-child(2) {
+        grid-area: mobdev;
+    }
+    &__item:nth-child(3) {
+        grid-area: design;
+    }
+    &__item {
+        display: flex;
+        width: 260px;
+    }
+    &__img {
+        display: block;
+        width: 60px;
+        position: relative;
+        z-index: 2;
+        padding-left: 15px;
+        padding-top: 15px;
+
+        @include before_circle;
+        &:before {
+            top: 0;
+            left: 0;
+        }
+    }
+    &__descr {
+        margin-left: 20px;
+    }
+}

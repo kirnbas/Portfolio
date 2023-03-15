@@ -1,0 +1,330 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .aboutme {
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+        }
+        &__footer {
+            column-gap: 20px;
+            p {
+                width: auto;
+            }
+        }
+        &__item {
+            width: 240px;
+        }
+        &__descr {
+            margin-left: 10px;
+        }
+    }
+
+    .resume {
+        &__wrapper {
+            grid-template-columns: repeat(2,360px);
+        }
+    }
+
+    .skills {
+        &__technology {
+            grid-template-columns: repeat(auto-fit,270px);
+            justify-content: center;
+        }
+        &__progress {
+            grid-template-columns: repeat(2,350px);
+            justify-content: center;
+        }
+    }
+
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            column-gap: 20px;
+            grid-template-columns: 400px 460px;
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2,200px);
+        }
+        &__btn {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+
+    .aboutme {
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+        }
+        &__footer {
+            grid-template-areas: 
+             "webdev"
+             "mobdev"
+             "design";
+        }
+        &__item {
+            width: 380px;
+        }
+        &__img {
+            min-width: 50px;
+        }
+    }
+
+    .resume {
+        &__wrapper {
+            grid-template-columns: 600px;
+        }
+    }
+
+    .skills {
+        &__progress {
+            grid-template-columns: repeat(2,350px);
+            justify-content: center;
+        }
+    }
+
+    .price {
+        &__wrapper {
+            //grid-template-columns: repeat(auto-fit, 350px);
+            padding: 0;            
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            column-gap: 20px;
+            grid-template-columns: 300px 400px;
+            padding-left: 0;
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2,190px);
+        }
+        &__btn {
+            font-size: 12px;
+            padding: 0 25px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .title {        
+        &_fz48 {
+            font-size: 28px;
+        }
+    }
+    .promo {
+        &__title {
+            line-height: 39px;
+            width: 300px;
+        }
+    }
+    .aboutme {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+            margin-right: 0;
+        }
+        &__subtitle {
+            margin-top: 40px;
+        }
+        &__footer {
+            grid-template-areas: 
+             "webdev mobdev"
+             "design .";
+        }
+        &__item {
+            width: 260px;
+        }
+        &__img {
+            min-width: 50px;
+        }
+    }
+
+    .resume {
+        &__wrapper {
+            grid-template-columns: 400px;
+        }
+    }
+
+    .skills {
+        &__progress {
+            grid-template-columns: 350px;
+            justify-content: center;
+        }
+    }
+
+    .portfolio {
+        padding-top: 40px;
+    }
+
+    .divider {
+        margin: 15px auto 0 auto;
+    }
+
+    .price {
+        padding-top: 40px;
+        
+        &__wrapper {
+            margin-top: 20px;
+            grid-template-columns: 350px;
+            justify-content: center;
+        }
+
+        &__item:nth-child(2n+1) {
+            padding-left: 0px;        
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            column-gap: 0;
+            grid-template-columns: 0 400px;
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+        }
+        &__triggers {
+            grid-template-columns: 200px;
+            row-gap: 20px;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .title {        
+        &_fz48 {
+            font-size: 26px;
+        }
+        &_fz36 {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+    .promo {
+        background: url('../img/main_bg.jpg') no-repeat 57%/cover;;
+        &__btns {
+            margin-top: 30px;
+        }
+        .hamburger {
+            right: 20px;
+        }
+    }
+    .menu {
+        &__block {
+            width: 250px;
+            padding-left: 20px;
+        }
+    }
+    .aboutme {
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+        }
+        &__footer {
+            grid-template-areas: 
+             "webdev"
+             "mobdev"
+             "design";
+        }
+    }
+    .resume {
+        &__wrapper {
+            grid-template-columns: 240px;
+            padding: 20px 25px 0 25px;
+        }
+    }
+
+    .skills {
+        padding-top: 40px;
+        &__technology {
+            margin-top: 20px;
+        }
+        &__progress {
+            margin-top: 40px;
+            grid-template-columns: 300px;
+            justify-content: center;
+            &-bar {
+                width: 300px;
+            }
+        }
+    }
+
+    .price {        
+        &__wrapper {
+            grid-template-columns: 250px;
+        }
+        .title_fz14 {
+            font-size: 12px;
+        }
+    }
+
+    .contacts {
+        padding-bottom: 50px;
+
+        &__wrapper {
+            column-gap: 0;
+            grid-template-columns: 0 300px;
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+        }
+        &__form {
+            grid-template-columns: 300px;
+            grid-template-rows: 45px 45px 190px;            
+        }
+        &__btn {
+            font-size: 14px;
+        }
+        &__textarea {
+            grid-column: 1 / 2;            
+        }
+        &__triggers {
+            grid-column: 1 / 2;
+            grid-template-columns: 240px;
+        }
+        &__link {
+            margin-right: 15px;
+        }
+        &__policy {
+            order: -1;
+        }
+    }
+} 
